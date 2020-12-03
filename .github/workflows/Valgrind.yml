@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         make test -C Hamming/3_Implementation/
-        valgrind ./Hamming/3_Implementation/build/Test_Hamming1.out
+        valgrind ./Hamming/3_Implementation/build/test_Hamming1.out
