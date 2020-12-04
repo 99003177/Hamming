@@ -19,5 +19,5 @@ jobs:
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
       run: |
-        make test -C Hamming/3_Implementation/
-        valgrind ./Hamming/3_Implementation/build/test_Hamming1.out
+        make test -C Hamming/_IMPLEMENTATION/
+        valgrind ./Hamming/_IMPLEMENTATION/build/test_Hamming1.out
