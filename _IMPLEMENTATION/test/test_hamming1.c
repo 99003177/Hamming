@@ -23,10 +23,7 @@ void test_error(void)
   TEST_ASSERT_EQUAL_INT16_ARRAY(arr2, hamming1(arr,6,arr1),10);
 
 }
-void test_error1(void)
-{
-TEST_ASSERT_EQUAL_INT16_ARRAY(arr2, hamming1(arr,6,arr3),10);
-}
+
 int test_main(void)
 {
 /* Initiate the Unity Test Framework */
@@ -35,8 +32,7 @@ int test_main(void)
 /* Run Test functions */
   RUN_TEST(test_hamming1);
   RUN_TEST(test_error);
-  RUN_TEST(test_error1);
-
+  
 
 /* Close the Unity Test Framework */
   return UNITY_END();
