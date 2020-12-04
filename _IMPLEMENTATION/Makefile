@@ -6,10 +6,10 @@ BUILD = build
 
 # All source code files
 SRC = main.c\
-src/Hamming.c
+src/hamming1.c
 
 # All test source files
-TEST_SRC = src/Hamming.c\
+TEST_SRC = src/hamming1.c\
 test/test.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
