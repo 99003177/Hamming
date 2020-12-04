@@ -1,20 +1,29 @@
-SRC = src/hamming1.c\
-Unity-master/src/unity.c\
-test/test_hamming1.c\
-Users/hp/Desktop/main.c
+# Name of the project
+PROJECT_NAME = Hamming
 
-INC = -Iunity\
--Iinc\
--Itest
+# Output directory
+BUILD = build
 
-PROJECT_NAME = HAMMING1.exe
+# All source code files
+SRC = main.c\
+src/Hamming.c
 
-$(PROJECT_NAME): $(SRC)
-	gcc $(SRC) $(INC) -o $(PROJECT_NAME)
+# All test source files
+TEST_SRC = src/Hamming.c\
+test/test.c
 
-run:$(PROJECT_NAME)
-	./${PROJECT_NAME}
-doc:
-	make -C documentation
-clean:
-	rm -rf $(PROJECT_NAME) documentation/html
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
+# All include folders with header files
+INC	= -Iinc
+
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+# Document files
+DOCUMENTATION_OUTPUT = documentation/html
+
+# Default target built
+$(PROJECT_NAME):all
+
+# Run the target even if the matching name exists
+.PHONY: run clean test  doc all
